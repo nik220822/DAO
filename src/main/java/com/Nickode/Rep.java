@@ -2,11 +2,10 @@ package com.Nickode;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
 
+import javax.sql.DataSource;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,18 +13,20 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
 
 @Repository
 public class Rep {
-    String theScript = read("select.sql");
+    private final String theScript = read("select.sql");
     @Autowired
-    NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+//    private final DataSource dataSource;
 
-    Rep(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
-        this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
-    }
+//    Rep(NamedParameterJdbcTemplate namedParameterJdbcTemplate, DataSource dataSource) {
+//        this.dataSource = dataSource;
+//        this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+//        this.theScript = read("select.sql");
+//    }
 
 //    public String getProductName(String name) throws SQLException {
 //        SqlParameterSource sqlParameterSource = new MapSqlParameterSource("name", name);

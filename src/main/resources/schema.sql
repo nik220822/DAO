@@ -1,4 +1,4 @@
---CREATE database NickDB;
+CREATE database NickDB;
 
 create table NickDB.CUSTOMERS (
 id int primary key auto_increment,
