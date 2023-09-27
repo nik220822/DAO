@@ -5,7 +5,7 @@ values
 ('Alexey', 'Иванов', 21, 73337896651),
 ('alexey', 'Петров', 26, 73337896657);
 
-insert NickDB.ORDERS(dt, customer_id, product_name, amount)
+insert NickDB.ORDERS (dt, customer_id, product_name, amount)
 values
 (20230901, 1, 'product1', 10),
 (20230903, 1, 'product2', 11),
