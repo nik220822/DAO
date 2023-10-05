@@ -1,12 +1,11 @@
 version: '1.0'
 services:
-  mysqlContainer:
+  mysqlContainer5:
     image: mysql
     ports:
       - "3310:3306"
     environment:
-#        - MYSQL_DATABASE=${MYSQL_DATABASE}
-#        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_DATABASE=NickDB
         - MYSQL_USERNAME=root
         - MYSQL_PASSWORD=mysql123
         - MYSQL_ROOT_PASSWORD=mysql123
