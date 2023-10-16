@@ -1,0 +1,13 @@
+  databaseChangeLog:
+    - include:
+        file: migrations/tablecreation.sql
+        relativeToChangeLogFile: true
+    - include:
+          file: migrations/tablecreation2.sql
+          relativeToChangeLogFile: true
+    - include:
+        file: migrations/data.sql
+        relativeToChangeLogFile: true
+    - include:
+        file: migrations/data2.sql
+        relativeToChangeLogFile: true
