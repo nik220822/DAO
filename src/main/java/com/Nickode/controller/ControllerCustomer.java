@@ -1,6 +1,6 @@
-package com.Nickode;
+package com.Nickode.controller;
 
-import org.springframework.stereotype.Controller;
+import com.Nickode.repository.RepositoryProducts;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,9 +11,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/")
-public class Contr {
-    Rep repository;
-    Contr(Rep repository){
+public class ControllerCustomer {
+    private RepositoryProducts repository;
+    ControllerCustomer(RepositoryProducts repository){
         this.repository = repository;
     }
     @GetMapping("/products/fetch-product")
