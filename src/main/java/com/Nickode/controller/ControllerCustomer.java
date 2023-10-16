@@ -13,11 +13,11 @@ import java.util.List;
 @RequestMapping("/")
 public class ControllerCustomer {
     private RepositoryProducts repository;
-    ControllerCustomer(RepositoryProducts repository){
+    public ControllerCustomer(RepositoryProducts repository){
         this.repository = repository;
     }
     @GetMapping("/products/fetch-product")
-    List<String> getName(@RequestParam("name") String name) throws SQLException {
+    public List<String> getName(@RequestParam("name") String name) throws SQLException {
         return repository.getProductName(name);
     }
 }
